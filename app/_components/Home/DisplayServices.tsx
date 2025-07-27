@@ -203,7 +203,7 @@ function DisplayServices() {
       {/* screen 2 */}
 
       <div className=" overflow-hidden snap-start   flex-wrap h-fit w-full flex items-center justify-center text-white text-4xl relative">
-        <div className="flex flex-col pb-16 w-full justify-center container items-center relative gap-3">
+        <div className="flex flex-col p-3 max-sm:pb-16 w-full justify-center container items-center relative gap-3">
           <ReviewsSlider
             reviews={reviews}
             eventImg={marriage}

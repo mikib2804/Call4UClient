@@ -1,14 +1,13 @@
 "use client";
-import Image from "next/image";
 import React from "react";
-import Header from "../AppHeaders/Header";
-import DisplayServices from "./DisplayServices";
+import HeaderInApp from "../AppHeaders/HeaderInApp";
+import GridDisplay from "./GridDisplay";
 
 function Main() {
   return (
     <div className="w-full h-screen  bg-gradient-to-t from-[#63b5e0] to-[#d9f1ff] flex flex-col">
-      <Header />
-      <DisplayServices />
+      <HeaderInApp />
+      <GridDisplay />
     </div>
   );
 }
