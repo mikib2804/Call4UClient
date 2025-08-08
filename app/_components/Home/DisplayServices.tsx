@@ -16,7 +16,7 @@ import ratingSatr4 from "../../../public/rankings/ratingSatr4.png";
 import ratingSatr5 from "../../../public/rankings/ratingSatr5.png";
 import React, { JSX, useState } from "react";
 import { log } from "console";
-import ConnectUs from "./ConnectUs";
+import ConnectUs from "../_Helpers/ConnectUs";
 import ReviewsSlider from "./SlideShow";
 type services = {
   Img: StaticImageData;
