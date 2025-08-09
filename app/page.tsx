@@ -3,7 +3,7 @@ import Main from "./_components/Home/Main";
 
 export default function Home() {
   return (
-    <main className="">
+    <main className="overflow-hidden ">
       <Main />
     </main>
   );

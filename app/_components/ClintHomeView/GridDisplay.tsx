@@ -11,26 +11,29 @@ import {
 } from "lucide-react";
 import { ClassValue } from "clsx";
 import invitation from "../../../public/invitation.png";
+import someInvate from "../../../public/someInvite.png";
 import Tooltip from "../_Helpers/toolTip";
 
 function GridDisplay() {
   const cardStyle: ClassValue =
-    "flex w-full h-fit flex-col items-center text-white justify-center gap-2 p-6 bg-[#2f84b7] rounded-xl";
+    "flex w-full h-fit flex-col items-center text-white justify-center gap-2 p-6  rounded-xl bg-gradient-to-b from-white to-[#f2f9ff] rounded-xl shadow-md shadow-gray-500 hover:-translate-y-1 transition-all duration-300";
   const textCardStl: ClassValue =
-    "text-[20px] max-lg:text-[16px] max-md:text-[14px] max-sm:text-[12px] text-center truncate overflow-hidden";
-
+    "text-[20px] max-lg:text-[18px] max-md:text-[16px] max-sm:text-[14px] text-center text-gray-700 truncate overflow-hidden";
+  const circleStyle: ClassValue = "w-12 h-12 text-gray-700 ";
+  const circleAmounts: ClassValue =
+    "w-16 h-16 rounded-full bg-[#6dbfec] flex items-center justify-center text-white font-semibold shadow-sm shadow-gray-500";
   return (
-    <div className="grid grid-cols-1  md:grid-cols-[10fr_6fr] h-fit gap-4 p-10 bg-gradient-to-t from-[#63b5e0] to-[#d9f1ff]">
+    <div className="grid grid-cols-1 h-auto   md:grid-cols-[10fr_6fr]  gap-4 p-10 max-md:bg-gradient-to-t overflow-x-hidden  from-[#63b5e0] to-[#d9f1ff] mb-4">
       {/* Left panel */}
       <div dir="rtl" className=" w-full flex flex-col gap-3">
-        <div className="flex justify-between bg-[#93d8fc] rounded-2xl items-center h-fit p-4">
-          <Image alt="חסר" src={group} width={60} height={60} />
-          <span className="text-3xl font-medium">רשימת מוזמנים לאירוע</span>
+        <div className="flex justify-between bg-gradient-to-b from-white to-[#f2f9ff] rounded-2xl items-center h-fit p-4 shadow-md shadow-gray-500">
+          <Image alt="חסר" src={group} className="sm:size-[60px] size-[40px]" />
+          <span className="text-3xl font-medium max-sm:text-[16px] text-center">
+            רשימת מוזמנים לאירוע
+          </span>
           <div className=" flex flex-col items-center justify-center ">
-            <div className="rounded-full h-16 w-16 p-4 flex items-center justify-center bg-white text-[#133551] font-semibold">
-              3
-            </div>
-            <span className="text-[14px] font-semibold text-[#133551]">
+            <div className={circleAmounts}>1500</div>
+            <span className="sm:text-[14px] font-semibold text-[#133551] max-sm:mt-2 text-[12px]">
               סך מוזמנים
             </span>
           </div>
@@ -38,36 +41,28 @@ function GridDisplay() {
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-2 p-1">
           <div className={cardStyle}>
-            <CheckCircle2 className="w-12 h-12" />
+            <CheckCircle2 className={circleStyle} />
             <span className={textCardStl}>אישרו הגעה</span>
-            <div className="w-16 h-16 rounded-full bg-white flex items-center justify-center text-[#133551] font-semibold">
-              10
-            </div>
+            <div className={circleAmounts}>10</div>
           </div>
           <div className={cardStyle}>
-            <CircleQuestionMark className="w-12 h-12" />
+            <CircleQuestionMark className={circleStyle} />
             <span className={textCardStl}> לא בטוחים</span>
-            <div className="w-16 h-16 rounded-full bg-white flex items-center justify-center text-[#133551] font-semibold">
-              10
-            </div>
+            <div className={circleAmounts}>10</div>
           </div>
           <div className={cardStyle}>
-            <CircleX className="w-12 h-12" />
+            <CircleX className={circleStyle} />
             <span className={textCardStl}>לא מגיעים </span>
-            <div className="w-16 h-16 rounded-full bg-white flex items-center justify-center text-[#133551] font-semibold">
-              10
-            </div>
+            <div className={circleAmounts}>10</div>
           </div>
           <div className={cardStyle}>
-            <ClockFading className="w-12 h-12" />
+            <ClockFading className={circleStyle} />
             <span className={textCardStl}> טרם השיבו</span>
-            <div className="w-16 h-16 rounded-full bg-white flex items-center justify-center text-[#133551] font-semibold">
-              10
-            </div>
+            <div className={circleAmounts}>10</div>
           </div>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-1 p-2">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 p-2">
           <div className="w-full text-white bg-gradient-to-b from-[rgb(60,153,203)] to-[#1c678f]  p-2 py-8 rounded-2xl flex items-center justify-center">
             <span className="text-xl max-sm:text-xl max-md:text-[14px]">
               לוח זמנים של אישורי
@@ -84,15 +79,20 @@ function GridDisplay() {
       </div>
 
       {/* Right panel */}
-      <div className="border-[2px] border-[rgba(28,103,143,0.30)]  w-full rounded-3xl overflow-hidden relative aspect-[4/5] md:aspect-auto">
-        <Image alt="" src={invitation} fill className="object-cover" />
+      <div className="w-full h-fit flex justify-center items-center">
+        <div className="border-[2px] border-[rgba(28,103,143,0.30)] max-w-[28rem] w-full rounded-3xl overflow-hidden relative sm:min-w-[28rem] aspect-[5/6] ">
+          <Image alt="" src={someInvate} fill className="object-fill" />
 
-        <div className="absolute top-8 right-8">
-          <Tooltip text="עריכת הזמנה">
-            <button className="cursor-pointer transition-transform active:scale-110">
-              <Edit className="w-6 h-6" />
-            </button>
-          </Tooltip>
+          <div className="absolute top-4 right-4">
+            <Tooltip
+              text="עריכת הזמנה"
+              className="max-md:text-[10px] max-md:left-2 md:-left-2 md:-mb-16"
+            >
+              <button className="cursor-pointer transition-transform active:scale-110 bg-white p-2 rounded-xl">
+                <Edit className="size-4" />
+              </button>
+            </Tooltip>
+          </div>
         </div>
       </div>
     </div>

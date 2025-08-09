@@ -127,11 +127,11 @@ function DisplayServices() {
   const inputStyles =
     "text-[19px] text-black placeholder:text-center p-2 rounded-xl  border-[1px] border-gray-400";
   return (
-    <div className="h-auto w-full  overflow-y-scroll max-sm:pb-14  ">
+    <div className="h-auto w-full relative   max-sm:pb-14   ">
       {/* screen 1 */}
-      <div className="overflow-hidden h-fit snap-start max-w-full overflow-x-hidden box-border px-4  font-heebo  overflow-y-scroll w-full flex flex-col items-center justify-center text-white text-4xl pb-5 lg:gap-8">
+      <div className="overflow-hidden h-fit  snap-start max-w-full overflow-x-hidden box-border px-4  font-heebo   w-full flex flex-col items-center justify-center text-white text-4xl pb-5 lg:gap-8">
         <div className="text-center">
-          <span className="block text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-gray-700">
+          <span className="block text-xl   sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-gray-700">
             הזמנות חכמות מתחילות כאן
           </span>
 
@@ -155,9 +155,9 @@ function DisplayServices() {
           {ContentBoxes.map((item, idx) => (
             <div
               key={idx}
-              className="flex flex-col shadow-gray-500 items-center text-center flex-[1_1_220px] 
+              className="flex flex-col  items-center text-center flex-[1_1_220px] 
                 sm:flex-[1_1_260px] max-w-[90%] sm:max-w-xs space-y-2 sm:space-y-3
-                 bg-gradient-to-b from-white to-[#f2f9ff] rounded-xl shadow-md p-4 sm:p-6"
+                 bg-gradient-to-b from-white to-[#f2f9ff] rounded-xl  p-4 sm:p-6"
             >
               <div className="rounded-full bg-[#6dbfec] w-8 h-8 sm:w-10 sm:h-10 flex items-center justify-center text-white">
                 {item.icon}
@@ -202,7 +202,7 @@ function DisplayServices() {
       </div>
       {/* screen 2 */}
 
-      <div className=" overflow-hidden snap-start   flex-wrap h-fit w-full flex items-center justify-center text-white text-4xl relative">
+      <div className=" overflow-hidden snap-start flex-wrap h-fit w-full flex items-center justify-center text-white text-4xl relative">
         <div className="flex flex-col p-3 max-sm:pb-16 w-full justify-center container items-center relative gap-3">
           <ReviewsSlider
             reviews={reviews}
