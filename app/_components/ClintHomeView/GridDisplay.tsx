@@ -13,6 +13,7 @@ import { ClassValue } from "clsx";
 import invitation from "../../../public/invitation.png";
 import someInvate from "../../../public/someInvite.png";
 import Tooltip from "../_Helpers/toolTip";
+import Invintation from "../_Helpers/Invintation";
 
 function GridDisplay() {
   const cardStyle: ClassValue =
@@ -23,10 +24,10 @@ function GridDisplay() {
   const circleAmounts: ClassValue =
     "w-16 h-16 rounded-full bg-[#6dbfec] flex items-center justify-center text-white font-semibold shadow-sm shadow-gray-500";
   return (
-    <div className="grid grid-cols-1 h-auto   md:grid-cols-[10fr_6fr]  gap-4 p-10 max-md:bg-gradient-to-t overflow-x-hidden  from-[#63b5e0] to-[#d9f1ff] mb-4">
+    <div className="grid grid-cols-1 h-auto  lg:p-30  md:grid-cols-[10fr_6fr]  gap-4 p-10 max-md:bg-gradient-to-t overflow-x-hidden  from-[#63b5e0] to-[#d9f1ff] mb-4">
       {/* Left panel */}
       <div dir="rtl" className=" w-full flex flex-col gap-3">
-        <div className="flex justify-between bg-gradient-to-b from-white to-[#f2f9ff] rounded-2xl items-center h-fit p-4 shadow-md shadow-gray-500">
+        <div className="flex justify-between bg-gradient-to-b from-white to-[#f2f9ff] rounded-2xl items-center h-fit p-4  shadow-md shadow-gray-500">
           <Image alt="חסר" src={group} className="sm:size-[60px] size-[40px]" />
           <span className="text-3xl font-medium max-sm:text-[16px] text-center">
             רשימת מוזמנים לאירוע
@@ -79,22 +80,8 @@ function GridDisplay() {
       </div>
 
       {/* Right panel */}
-      <div className="w-full h-fit flex justify-center items-center">
-        <div className="border-[2px] border-[rgba(28,103,143,0.30)] max-w-[28rem] w-full rounded-3xl overflow-hidden relative sm:min-w-[28rem] aspect-[5/6] ">
-          <Image alt="" src={someInvate} fill className="object-fill" />
 
-          <div className="absolute top-4 right-4">
-            <Tooltip
-              text="עריכת הזמנה"
-              className="max-md:text-[10px] max-md:left-2 md:-left-2 md:-mb-16"
-            >
-              <button className="cursor-pointer transition-transform active:scale-110 bg-white p-2 rounded-xl">
-                <Edit className="size-4" />
-              </button>
-            </Tooltip>
-          </div>
-        </div>
-      </div>
+      <Invintation />
     </div>
   );
 }
