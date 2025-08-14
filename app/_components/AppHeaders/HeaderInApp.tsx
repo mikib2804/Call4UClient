@@ -14,7 +14,7 @@ function HeaderInApp() {
     >
       <div className="contain-content flex absolute right-0">
         <Image alt="" src={call4U} width={100} height={100} />
-        <div className="h-100% w-[0.5px] bg-gray-500 opacity-55"></div>
+        <div className="h-100% w-[1.5px] bg-gray-500 opacity-55"></div>
         <div dir="rtl" className="max-sm:hidden flex flex-col gap-[1px] p-2">
           <span>מזינים מאשרים וחוסכים זמן.</span>
           <span>מערכת שתעשה בשבילכם את כל אישורי ההגעה לאירוע</span>
