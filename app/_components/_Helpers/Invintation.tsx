@@ -4,7 +4,7 @@ import partyImg from "../../../public/party.jpg";
 import { Pencil } from "lucide-react";
 function Invintation() {
   return (
-    <div className="w-full h-fit flex items-center justify-center">
+    <div className="lg:w-full max-md:w-full h-fit flex items-center justify-center md:w-[60%]">
       <div className="flex relative overflow-hidden flex-col max-lg:p-8 p-6 w-full justify-center items-center bg-gradient-to-b from-white to-[#f2f9ff] rounded-2xl ">
         <svg
           className="absolute bottom-0 left-0 w-full h-[45%] opacity-20 pointer-events-none"
@@ -44,7 +44,7 @@ function Invintation() {
             <span>של</span>
             <span className="text-2xl font-medium">{"אנה ואלזה"}</span>
             <span>כ"ה בטבת התשפ"ה</span>
-            <span className="text-xl font-medium max-sm:text-sm">
+            <span className="max-md:text-xl font-medium  md:text-[16px] ">
               אולם: ארמוניה בגן, האודם 6 גדרה
             </span>
           </div>

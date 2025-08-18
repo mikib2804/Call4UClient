@@ -45,7 +45,7 @@ function GridDisplay() {
             </div>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-2 p-1">
+          <div className="grid grid-cols-2 w-full md:grid-cols-4 gap-2 ">
             <div className={cardStyle}>
               <CheckCircle2 className={circleStyle} />
               <span className={textCardStl}>אישרו הגעה</span>
@@ -68,7 +68,7 @@ function GridDisplay() {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 p-2">
+          <div className="grid  grid-cols-1 sm:grid-cols-2 gap-2 p-2">
             <div className="w-full text-white bg-gradient-to-b from-[rgb(60,153,203)] to-[#1c678f]  p-2 py-8 rounded-2xl flex items-center justify-center">
               <span className="text-xl max-sm:text-xl max-md:text-[14px]">
                 לוח זמנים של אישורי
@@ -85,8 +85,9 @@ function GridDisplay() {
         </div>
 
         {/* Right panel */}
-
-        <Invintation />
+        <div className="flex items-center justify-center w-full h-fit">
+          <Invintation />
+        </div>
       </div>
     </div>
   );
